@@ -1,4 +1,4 @@
-const products = [
+exports.products = [
 	{
 		id: ' ',
 		name: 'Steel Pot',
@@ -91,7 +91,7 @@ const products = [
 	}
 ];
 
-const categories = [
+exports.categories = [
 	{
 		id: 'c01b1ff4-f894-4ef2-b27a-22aacc2fca70',
 		name: 'Kitchen'
@@ -105,7 +105,3 @@ const categories = [
 		name: 'Sports'
 	}
 ];
-
-const data = { products, categories };
-
-module.exports = data;
