@@ -1,0 +1,27 @@
+{
+	"name": "con-ecomerce-graphql",
+	"version": "1.0.0",
+	"description": "con-ecomerce-graphql",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Consciously/con-ecomerce-graphql.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Consciously/con-ecomerce-graphql/issues"
+	},
+	"homepage": "https://github.com/Consciously/con-ecomerce-graphql#readme",
+	"dependencies": {
+		"apollo-server": "^3.6.7",
+		"graphql": "^16.3.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	}
+}
