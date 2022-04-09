@@ -1,6 +1,6 @@
 exports.Category = {
-	products: ({ id: categoryId }, { filter }, { products, reviews }) => {
-		const categoryProducts = products.filter(
+	products: ({ id: categoryId }, { filter }, { db }) => {
+		const categoryProducts = db.products.filter(
 			product => product.categoryId === categoryId
 		);
 		let filteredCategoryProducts = categoryProducts;
@@ -16,7 +16,7 @@ exports.Category = {
 			if ([1, 2, 3, 4, 5].includes(avgRating)) {
 				filteredCategoryProducts = filteredCategoryProducts.filter(product => {
 					let numberOfReviews = 0;
-					const sumRating = reviews.reduce((sumRating, review) => {
+					const sumRating = db.reviews.reduce((sumRating, review) => {
 						if (review.productId === product.id) {
 							numberOfReviews++;
 							return sumRating + review.rating;

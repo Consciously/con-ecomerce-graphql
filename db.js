@@ -1,4 +1,4 @@
-exports.products = [
+const products = [
 	{
 		id: '53a0724c-a416-4cac-ae45-bfaedce1f147',
 		name: 'Steel Pot',
@@ -6,7 +6,8 @@ exports.products = [
 		quantity: 230,
 		price: 42.44,
 		image: 'img-1',
-		onSale: false
+		onSale: false,
+		categoryId: 'c01b1ff4-f894-4ef2-b27a-22aacc2fca70'
 	},
 	{
 		id: 'c2af9adc-d0b8-4d44-871f-cef66f86f7f6',
@@ -90,7 +91,7 @@ exports.products = [
 	}
 ];
 
-exports.categories = [
+const categories = [
 	{
 		id: 'c01b1ff4-f894-4ef2-b27a-22aacc2fca70',
 		name: 'Kitchen'
@@ -105,15 +106,15 @@ exports.categories = [
 	}
 ];
 
-exports.reviews = [
-	// {
-	// 	id: 'b22da5d4-6a4b-4db5-8ec3-acc228c36260',
-	// 	date: '2021-01-01',
-	// 	title: 'This is bad',
-	// 	comment: 'when i bought this it broke the stove',
-	// 	rating: 1,
-	// 	productId: 1
-	// },
+const reviews = [
+	{
+		id: 'b22da5d4-6a4b-4db5-8ec3-acc228c36260',
+		date: '2021-01-01',
+		title: 'This is bad',
+		comment: 'when i bought this it broke the stove',
+		rating: 1,
+		productId: '53a0724c-a416-4cac-ae45-bfaedce1f147'
+	},
 	{
 		id: '78851fe8-a657-410f-9b0a-2bc952636e16',
 		date: '2021-04-23',
@@ -284,3 +285,9 @@ exports.reviews = [
 		productId: '47bf3941-9c8b-42c0-9c72-7f3985492a5b'
 	}
 ];
+
+exports.db = {
+	products,
+	categories,
+	reviews
+};
